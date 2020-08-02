@@ -1,0 +1,16 @@
+server:
+  port: 29020
+  servlet:
+    context-path: /order
+eureka:
+  instance:
+    instance-id: order-service-01
+    lease-renewal-interval-in-seconds: 10
+    lease-expiration-duration-in-seconds: 15
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:9001/eureka/,http://localhost:9002/eureka/
+spring:
+  application:
+    name: order-service
